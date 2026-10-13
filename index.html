@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f1eb">
+  <meta name="description" content="株式会社ユニークハウスは埼玉県川口市を拠点に、内装解体から仕上げまで室内工事全般に対応。旅館・ホテルの改修工事を中心に手がけています。">
+  <title>株式会社ユニークハウス｜内装リフォーム</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&family=Shippori+Mincho:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paper: #f4f1eb;
+      --white: #fffefa;
+      --ink: #202823;
+      --muted: #6d746e;
+      --green: #314c40;
+      --green-light: #dfe6dc;
+      --orange: #c66d45;
+      --line: #d9ddd5;
+      --serif: "Shippori Mincho", "Noto Serif JP", serif;
+      --sans: "DM Sans", "Noto Sans JP", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; color: var(--ink); background: var(--paper); font-family: var(--sans); line-height: 1.8; letter-spacing: .025em; }
+    a { color: inherit; text-decoration: none; }
+    img, svg { display: block; max-width: 100%; }
+    .wrap { width: min(1160px, calc(100% - 64px)); margin-inline: auto; }
+    .topbar { height: 88px; display: flex; align-items: center; border-bottom: 1px solid rgba(32,40,35,.08); }
+    .topbar-inner { display: flex; align-items: center; justify-content: space-between; gap: 32px; }
+    .brand { display: inline-flex; align-items: center; gap: 13px; min-width: max-content; }
+    .brand-mark { width: 44px; height: 38px; display: flex; align-items: center; justify-content: center; color: var(--white); background: var(--green); border-radius: 50% 50% 50% 8px; font: 700 15px/1 var(--serif); letter-spacing: -.08em; }
+    .brand-mark .mark-q { color: #e6a47f; }
+    .brand-name { display: grid; line-height: 1.35; }
+    .brand-name strong { font-size: 14px; letter-spacing: .08em; }
+    .brand-name small { margin-top: 3px; font: 10px/1.2 var(--sans); letter-spacing: .17em; color: var(--muted); text-transform: uppercase; }
+    nav { display: flex; align-items: center; gap: clamp(18px, 3vw, 38px); font-size: 12px; font-weight: 600; }
+    nav a:not(.nav-cta) { transition: color .2s ease; }
+    nav a:not(.nav-cta):hover { color: var(--orange); }
+    .nav-cta { padding: 12px 19px; color: var(--white); background: var(--green); border-radius: 2px; transition: background .2s ease; }
+    .nav-cta:hover { background: #243a30; }
+    .hero { position: relative; overflow: hidden; padding: 68px 0 90px; }
+    .hero-grid { display: grid; grid-template-columns: .88fr 1.12fr; align-items: center; gap: 48px; }
+    .eyebrow { display: flex; align-items: center; gap: 12px; color: var(--orange); font-size: 10px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; }
+    .eyebrow::before { content: ""; width: 30px; height: 1px; background: currentColor; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { max-width: 520px; margin: 21px 0 20px; font: 600 clamp(37px, 5.1vw, 63px)/1.45 var(--serif); letter-spacing: .055em; }
+    h1 .accent { color: var(--green); position: relative; white-space: nowrap; }
+    h1 .accent::after { content: ""; position: absolute; z-index: -1; left: 0; right: 2px; bottom: 8px; height: 13px; background: #e1b18e; opacity: .48; }
+    .hero-copy { max-width: 410px; color: var(--muted); font-size: 14px; line-height: 2.1; }
+    .hero-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 20px; margin-top: 32px; }
+    .button { min-height: 52px; display: inline-flex; align-items: center; justify-content: center; gap: 25px; padding: 0 21px; color: white; background: var(--green); font-size: 12px; font-weight: 600; transition: transform .2s, background .2s; }
+    .button:hover { transform: translateY(-2px); background: #243a30; }
+    .button .arrow { font: 18px/1 var(--sans); }
+    .text-link { display: inline-flex; align-items: center; gap: 9px; font-size: 12px; font-weight: 600; }
+    .text-link span { color: var(--orange); font-size: 17px; }
+    .hero-visual { min-height: 510px; position: relative; }
+    .room-card { position: absolute; inset: 0 0 25px 22px; overflow: hidden; background: #d9ded4; }
+    .room-card svg { width: 100%; height: 100%; }
+    .visual-stamp { position: absolute; left: 0; bottom: 0; width: 105px; height: 105px; display: grid; place-content: center; text-align: center; color: white; background: var(--orange); border-radius: 50%; font: 500 12px/1.5 var(--serif); transform: rotate(-9deg); }
+    .visual-stamp span { display: block; font: 10px/1.5 var(--sans); letter-spacing: .12em; }
+    .vertical-note { position: absolute; right: -22px; top: 30px; writing-mode: vertical-rl; color: var(--green); font: 500 11px/1.7 var(--serif); letter-spacing: .14em; }
+    .hero-index { position: absolute; bottom: 8px; right: 0; font: 500 11px/1 var(--sans); letter-spacing: .1em; color: var(--muted); }
+    .hero-index b { color: var(--orange); font-weight: 600; }
+    .intro-strip { background: var(--green); color: var(--white); padding: 25px 0; }
+    .intro-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .intro-inner p { margin: 0; font: 500 clamp(16px, 2vw, 21px)/1.7 var(--serif); letter-spacing: .08em; }
+    .intro-inner small { color: #c5d1c7; font-size: 10px; letter-spacing: .13em; white-space: nowrap; }
+    section.content-section { padding: 108px 0; }
+    .section-head { display: flex; align-items: end; justify-content: space-between; gap: 24px; margin-bottom: 42px; }
+    .section-head h2 { margin: 11px 0 0; font: 600 clamp(27px, 3vw, 38px)/1.5 var(--serif); letter-spacing: .06em; }
+    .section-head p { max-width: 355px; margin: 0; color: var(--muted); font-size: 12px; line-height: 2; }
+    .section-label { color: var(--orange); font: 700 10px/1.3 var(--sans); letter-spacing: .18em; text-transform: uppercase; }
+    .service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .service-card { min-height: 245px; display: flex; flex-direction: column; justify-content: space-between; padding: 25px 26px; background: var(--white); border: 1px solid rgba(49,76,64,.1); transition: transform .25s, box-shadow .25s; }
+    .service-card:hover { transform: translateY(-4px); box-shadow: 0 16px 35px rgba(35,48,39,.08); }
+    .service-no { color: #9aa79b; font: 500 11px/1 var(--sans); letter-spacing: .12em; }
+    .service-icon { width: 52px; height: 52px; display: grid; place-items: center; margin: 21px 0 14px; color: var(--green); background: var(--green-light); border-radius: 50%; }
+    .service-icon svg { width: 25px; height: 25px; }
+    .service-card h3 { margin: 0 0 8px; font: 600 18px/1.55 var(--serif); letter-spacing: .06em; }
+    .service-card p { margin: 0; color: var(--muted); font-size: 11px; line-height: 1.9; }
+    .about { background: #e8e9e1; }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: clamp(45px, 8vw, 105px); }
+    .about-art { position: relative; min-height: 440px; overflow: hidden; background: #d3d7ce; }
+    .about-art svg { width: 100%; height: 100%; position: absolute; inset: 0; }
+    .about-caption { position: absolute; left: 20px; bottom: 20px; padding: 10px 13px; color: var(--green); background: rgba(255,254,250,.88); font: 500 11px/1.5 var(--serif); letter-spacing: .08em; }
+    .about-copy h2 { margin: 12px 0 19px; font: 600 clamp(27px, 3vw, 39px)/1.6 var(--serif); letter-spacing: .06em; }
+    .about-copy > p { margin-bottom: 23px; color: var(--muted); font-size: 13px; line-height: 2.2; }
+    .about-points { margin: 25px 0 30px; padding: 0; list-style: none; border-top: 1px solid #cbd0c7; }
+    .about-points li { display: flex; align-items: center; gap: 15px; padding: 13px 0; border-bottom: 1px solid #cbd0c7; font-size: 12px; font-weight: 500; }
+    .about-points li::before { content: "＋"; color: var(--orange); font-size: 14px; }
+    .about-facts { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 25px 0 29px; }
+    .about-fact { padding: 15px 16px; background: rgba(255,254,250,.63); border-left: 2px solid var(--orange); }
+    .about-fact strong { display: block; color: var(--green); font: 600 18px/1.4 var(--serif); }
+    .about-fact span { color: var(--muted); font-size: 10px; line-height: 1.7; }
+    .works-section { background: var(--white); }
+    .project-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+    .project-card { min-height: 220px; padding: 27px 29px; background: var(--paper); border-top: 2px solid var(--orange); }
+    .project-card .project-type { color: var(--orange); font-size: 10px; font-weight: 700; letter-spacing: .16em; }
+    .project-card h3 { margin: 11px 0 10px; font: 600 19px/1.55 var(--serif); letter-spacing: .05em; }
+    .project-card p { margin: 0; color: var(--muted); font-size: 12px; line-height: 2; }
+    .workflow { margin-top: 34px; padding: 28px 30px 30px; color: var(--white); background: var(--green); }
+    .workflow h3 { margin: 0 0 21px; font: 500 18px/1.5 var(--serif); letter-spacing: .07em; }
+    .workflow-steps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
+    .workflow-step { padding: 13px 14px; background: rgba(255,255,255,.08); }
+    .workflow-step small { display: block; margin-bottom: 5px; color: #e6a47f; font-size: 9px; letter-spacing: .13em; }
+    .workflow-step strong { font: 500 13px/1.7 var(--serif); }
+    .workflow-note { margin: 16px 0 0; color: #c9d3ca; font-size: 10px; line-height: 1.8; }
+    .case-gallery-head { display: flex; align-items: baseline; justify-content: space-between; gap: 18px; margin: 38px 0 15px; }
+    .case-gallery-head h3 { margin: 0; font: 600 18px/1.5 var(--serif); letter-spacing: .06em; }
+    .case-gallery-head span { color: var(--muted); font-size: 9px; letter-spacing: .14em; }
+    .case-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+    .case-card { margin: 0; min-width: 0; background: var(--paper); }
+    .case-photos { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); grid-template-rows: repeat(2, 138px); gap: 7px; overflow: hidden; background: #e5e4dc; }
+    .case-photo { min-width: 0; min-height: 0; overflow: hidden; background: #e5e4dc; }
+    .case-photo:first-child { grid-row: 1 / span 2; }
+    .case-photo img { width: 100%; height: 100%; object-fit: cover; transition: transform .35s ease; }
+    .case-card:hover .case-photo img { transform: scale(1.035); }
+    .case-caption { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; padding: 13px 14px 15px; }
+    .case-caption span { color: var(--orange); font: 700 9px/1.4 var(--sans); letter-spacing: .15em; }
+    .case-caption strong { color: var(--green); font: 600 12px/1.5 var(--serif); letter-spacing: .04em; }
+    .contact { background: var(--green); color: var(--white); }
+    .contact .section-label { color: #e6a47f; }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 50px; }
+    .contact h2 { margin: 12px 0 16px; font: 600 clamp(29px, 3.4vw, 43px)/1.6 var(--serif); letter-spacing: .06em; }
+    .contact-copy { max-width: 455px; color: #c9d3ca; font-size: 12px; line-height: 2.1; }
+    .contact-card { padding: 30px 32px; color: var(--ink); background: var(--white); }
+    .contact-card small { color: var(--orange); font-size: 10px; font-weight: 700; letter-spacing: .16em; }
+    .contact-card h3 { margin: 8px 0 8px; font: 600 21px/1.6 var(--serif); }
+    .contact-card > p { margin: 0 0 20px; color: var(--muted); font-size: 11px; line-height: 1.9; }
+    .contact-details { margin: 0 0 22px; border-top: 1px solid var(--line); }
+    .contact-row { display: grid; grid-template-columns: 78px 1fr; gap: 12px; padding: 11px 0; border-bottom: 1px solid var(--line); font-size: 12px; line-height: 1.7; }
+    .contact-row dt { color: var(--muted); }
+    .contact-row dd { margin: 0; font-weight: 600; overflow-wrap: anywhere; }
+    .contact-row a { text-decoration: underline; text-decoration-color: #b8c2b9; text-underline-offset: 3px; }
+    .contact-row a:hover { color: var(--orange); }
+    .wechat-contact { display: flex; align-items: center; gap: 16px; margin: 0 0 18px; padding: 14px; border: 1px solid var(--line); background: #fafaf7; }
+    .wechat-contact img { width: 112px; height: 112px; flex: 0 0 auto; object-fit: contain; }
+    .wechat-contact p { margin: 0; color: var(--muted); font-size: 11px; line-height: 1.8; }
+    .wechat-contact strong { display: block; margin-bottom: 4px; color: var(--green); font-size: 12px; }
+    .contact-card .button { width: 100%; }
+    footer { padding: 24px 0; color: #d0d8d1; background: #263c32; font-size: 10px; }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .footer-inner p { margin: 0; }
+    .footer-brand { display: flex; align-items: center; gap: 10px; color: white; font-size: 11px; font-weight: 600; letter-spacing: .09em; }
+    .footer-brand .brand-mark { width: 34px; height: 28px; font-size: 10px; background: #496252; }
+    @media (max-width: 850px) {
+      .wrap { width: min(100% - 40px, 680px); }
+      .topbar { height: 74px; }
+      nav { gap: 17px; }
+      nav a:not(.nav-cta) { display: none; }
+      .hero { padding: 47px 0 69px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 28px; }
+      .hero-copy { max-width: 560px; }
+      .hero-visual { min-height: clamp(320px, 72vw, 480px); }
+      .room-card { inset: 0 0 18px 16px; }
+      .vertical-note { right: -16px; }
+      .section-head { align-items: start; flex-direction: column; gap: 14px; }
+      section.content-section { padding: 78px 0; }
+      .about-grid { gap: 38px; }
+      .about-art { min-height: 380px; }
+      .contact-grid { gap: 25px; }
+      .case-photos { grid-template-rows: repeat(2, 112px); }
+    }
+    @media (max-width: 600px) {
+      .wrap { width: calc(100% - 36px); }
+      .brand-name strong { font-size: 12px; }
+      .brand-name small { font-size: 9px; }
+      .nav-cta { padding: 10px 12px; font-size: 10px; }
+      h1 { font-size: clamp(36px, 10vw, 49px); }
+      .hero { padding-top: 39px; }
+      .hero-visual { min-height: 300px; }
+      .visual-stamp { width: 78px; height: 78px; font-size: 10px; }
+      .visual-stamp span { font-size: 8px; }
+      .intro-inner { align-items: start; flex-direction: column; gap: 5px; }
+      .service-grid { grid-template-columns: 1fr; gap: 12px; }
+      .service-card { min-height: 210px; padding: 22px; }
+      .service-icon { margin: 13px 0 10px; }
+      .about-grid, .contact-grid { grid-template-columns: 1fr; }
+      .about-art { min-height: 290px; }
+      .about-copy h2 { margin-top: 10px; }
+      .project-grid { grid-template-columns: 1fr; gap: 12px; }
+      .case-gallery { grid-template-columns: 1fr; gap: 15px; }
+      .case-photos { grid-template-rows: repeat(2, 138px); }
+      .case-caption { align-items: baseline; flex-direction: row; gap: 8px; padding: 12px 13px 14px; }
+      .workflow { padding: 23px 20px; }
+      .workflow-steps { grid-template-columns: 1fr 1fr; }
+      .contact-card { padding: 24px 21px; }
+      .footer-inner { align-items: start; flex-direction: column; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition-duration: .01ms !important; } }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="#top" aria-label="株式会社ユニークハウス トップ">
+        <span class="brand-mark" aria-hidden="true"><span class="mark-u">U</span><span class="mark-q">Q</span></span>
+        <span class="brand-name"><strong>株式会社ユニークハウス</strong><small>UNIQUE HOUSE · INTERIOR</small></span>
+      </a>
+      <nav aria-label="メインナビゲーション">
+        <a href="#service">サービス</a>
+        <a href="#about">私たちについて</a>
+        <a href="#works">旅館・ホテル改修</a>
+        <a class="nav-cta" href="#contact">お問い合わせ <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-text">
+          <div class="eyebrow">Interior renovation</div>
+          <h1>解体から仕上げまで、<br><span class="accent">室内工事を一貫対応。</span></h1>
+          <p class="hero-copy">建物一棟まるごとの改修を得意とし、解体から仕上げまで一社で一貫して対応します。窓口をまとめることで、業者間の調整や連絡の手間を軽減。長年築いてきた協力会社とのネットワークを活かし、改修工事に関する幅広いご相談を承ります。</p>
+          <div class="hero-actions">
+            <a class="button" href="#contact">工事のご相談 <span class="arrow" aria-hidden="true">→</span></a>
+            <a class="text-link" href="#service">工事内容を見る <span aria-hidden="true">↘</span></a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-label="明るく落ち着いたリビングのイラスト" role="img">
+          <div class="room-card">
+            <svg viewBox="0 0 760 590" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs>
+                <linearGradient id="wall" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#eee9df"/><stop offset="1" stop-color="#dddcd1"/></linearGradient>
+                <linearGradient id="floor" x1="0" y1="0" x2="1" y2=".2"><stop stop-color="#c8b49a"/><stop offset="1" stop-color="#ddcdb5"/></linearGradient>
+                <linearGradient id="sun" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fffdf4" stop-opacity=".8"/><stop offset="1" stop-color="#fffdf4" stop-opacity="0"/></linearGradient>
+              </defs>
+              <rect width="760" height="590" fill="url(#wall)"/>
+              <path d="M0 430 760 383v207H0z" fill="url(#floor)"/>
+              <path d="m442 0 318 0v420l-318 12z" fill="#e5e0d5"/>
+              <rect x="493" y="64" width="205" height="278" fill="#b5c5bb"/>
+              <rect x="507" y="78" width="177" height="250" fill="#d3ded3"/>
+              <path d="M508 270c39-70 79-57 102-112 20 28 42 34 74 21v149H508z" fill="#91a991" opacity=".8"/>
+              <path d="M507 285c49-36 96-21 177-77v120H507z" fill="#a4b5a2"/>
+              <path d="M594 78h5v250h-5zM507 199h177v5H507z" fill="#f3efe5"/>
+              <path d="M485 342h220v13H485z" fill="#aa9175"/>
+              <path d="m443 0 317 0v420L442 442z" fill="url(#sun)" opacity=".65"/>
+              <rect x="80" y="87" width="238" height="202" fill="#f7f3e9"/>
+              <rect x="93" y="101" width="211" height="174" fill="#d1d6c9"/>
+              <path d="M94 226c42-61 92-38 126-86 25 33 49 43 84 29v106H94z" fill="#9eae99"/>
+              <path d="M95 243c56-28 125-18 209-73v105H95z" fill="#b3bdab"/>
+              <rect x="66" y="287" width="269" height="14" fill="#b7a38b"/>
+              <path d="M108 301h9v115h-9zM281 301h9v115h-9z" fill="#8d7965"/>
+              <rect x="142" y="319" width="145" height="95" rx="4" fill="#e8e0d4"/>
+              <rect x="132" y="344" width="166" height="78" rx="9" fill="#c0c7b8"/>
+              <rect x="124" y="369" width="181" height="61" rx="10" fill="#aab5a5"/>
+              <rect x="140" y="414" width="9" height="35" fill="#786b5a"/><rect x="279" y="414" width="9" height="35" fill="#786b5a"/>
+              <path d="M376 417c35-67 129-69 161 0z" fill="#c9b79e"/><path d="M392 416c25-42 87-43 112 0z" fill="#eee8db"/>
+              <path d="M402 416h95v8h-95z" fill="#8c7865"/>
+              <path d="M34 432h695v12H34z" fill="#b39c7f" opacity=".48"/>
+              <ellipse cx="402" cy="480" rx="194" ry="25" fill="#857c6c" opacity=".12"/>
+              <rect x="694" y="143" width="23" height="202" fill="#a18a6f"/><path d="M681 143h49l-24-41z" fill="#d1a56f"/>
+              <path d="M707 345c-14 35-15 56-5 82" stroke="#7d705f" stroke-width="4" fill="none"/>
+              <path d="M701 430c-23 0-39 9-48 22 24 2 42-4 53-16M704 425c17-16 34-19 49-17-13 20-28 28-48 27" fill="#758b72"/>
+              <rect y="0" width="760" height="590" fill="#eacbaa" opacity=".06"/>
+            </svg>
+          </div>
+          <div class="visual-stamp">住まいに<br>ひと工夫<span>YOUR UNIQUE SPACE</span></div>
+          <div class="vertical-note">空間から、暮らしを整える。</div>
+          <div class="hero-index"><b>01</b> — 03</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="intro-strip">
+      <div class="wrap intro-inner">
+        <p>解体から仕上げまで。室内工事をまとめてお任せください。</p>
+        <small>INTERIOR WORKS · FROM START TO FINISH</small>
+      </div>
+    </div>
+
+    <section class="content-section" id="service">
+      <div class="wrap">
+        <div class="section-head">
+          <div><div class="section-label">Construction scope</div><h2>解体から完成まで、室内工事全般</h2></div>
+          <p>工事の規模や建物の用途に合わせて、室内の各工程に対応します。部分的な改修から、解体を伴う内装の全面改修までご相談ください。</p>
+        </div>
+        <div class="service-grid">
+          <article class="service-card">
+            <div><span class="service-no">01 / DEMOLITION</span><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m4 20 5-5m-1-9 8 8M5 5l4-2 12 12-2 4-4-1L4 7zM3 21h18" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
+            <div><h3>内装解体・撤去</h3><p>改修内容に合わせて既存の内装を解体・撤去し、次の工事に向けた現場を整えます。</p></div>
+          </article>
+          <article class="service-card">
+            <div><span class="service-no">02 / BASE & CARPENTRY</span><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 20V5h16v15M4 10h16M9 5v15m6-10v10M2 20h20" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
+            <div><h3>下地・造作工事</h3><p>壁・天井・床の下地づくりや間仕切り、室内の造作など、仕上げ前の工程を行います。</p></div>
+          </article>
+          <article class="service-card">
+            <div><span class="service-no">03 / EQUIPMENT</span><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 3v7m4-7v7M5 7h8M9 10v11m7-18v18m0-18c2 2 3 4 3 7h-3" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
+            <div><h3>電気・設備・水まわり</h3><p>改修に伴う室内設備、照明・電気まわり、水まわりなどの工事にも対応します。</p></div>
+          </article>
+          <article class="service-card">
+            <div><span class="service-no">04 / FINISHING</span><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16v16H4zM4 10h16M10 4v16M15 10v10"/><path d="m7 7 .01 0M13 7l.01 0M18 7l.01 0" stroke-linecap="round"/></svg></div></div>
+            <div><h3>内装仕上げ</h3><p>壁紙・床材・塗装など、空間の印象を整える仕上げ工事を行います。</p></div>
+          </article>
+          <article class="service-card">
+            <div><span class="service-no">05 / FIXTURES</span><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 21V3h14v18M8 7h8M8 11h8M8 15h5" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
+            <div><h3>建具・室内設備の取付</h3><p>扉や室内設備など、改修内容に応じた取付・交換を含めてご相談いただけます。</p></div>
+          </article>
+          <article class="service-card">
+            <div><span class="service-no">06 / COMPLETION</span><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m4 12 5 5L20 6" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 3a9 9 0 1 0 9 9" stroke-linecap="round"/></svg></div></div>
+            <div><h3>仕上げ・引き渡し</h3><p>各工事を仕上げ、室内全体を確認したうえでお引き渡しまで進めます。</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section about" id="about">
+      <div class="wrap about-grid">
+        <div class="about-art" role="img" aria-label="素材を組み合わせたインテリアのイラスト">
+          <svg viewBox="0 0 600 510" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="600" height="510" fill="#d8ddd2"/>
+            <path d="M0 383h600v127H0z" fill="#c4b39c"/>
+            <rect x="48" y="47" width="238" height="279" fill="#f0eadf"/>
+            <rect x="65" y="63" width="202" height="245" fill="#bdcbbd"/>
+            <path d="M65 248c42-67 78-56 121-118 23 28 49 48 81 33v145H65z" fill="#83967f"/>
+            <path d="M65 267c55-36 127-13 202-69v110H65z" fill="#a6b3a0"/>
+            <path d="M166 63h5v245h-5zM65 181h202v5H65z" fill="#eee9dd"/>
+            <rect x="42" y="323" width="251" height="12" fill="#967e63"/>
+            <path d="M79 335h9v87h-9zm185 0h9v87h-9z" fill="#796c5c"/>
+            <path d="M353 0h247v510H353z" fill="#e5e1d6"/>
+            <path d="M365 0h9v510h-9zM589 0h11v510h-11z" fill="#c6c5b8"/>
+            <rect x="382" y="33" width="191" height="292" fill="#d1c6b4"/>
+            <path d="M393 45h169v267H393z" fill="#ece7dc"/>
+            <path d="M410 308V111c0-31 29-50 62-50 36 0 62 23 62 50v197z" fill="#aab8a8"/>
+            <path d="M427 308V124c0-22 18-37 45-37 27 0 45 16 45 37v184z" fill="#becbbb"/>
+            <path d="M472 88v220" stroke="#eee9df" stroke-width="6"/>
+            <rect x="374" y="323" width="207" height="12" fill="#997f63"/>
+            <path d="M386 335h8v87h-8zm183 0h8v87h-8z" fill="#756956"/>
+            <path d="M0 424h600v86H0z" fill="#cebfa8"/>
+            <ellipse cx="306" cy="428" rx="259" ry="17" fill="#857b6a" opacity=".13"/>
+            <path d="M299 336c-16-40-8-67 21-79 24 14 29 43 14 79M320 336c-6-44 8-74 37-81 18 26 12 55-9 81M320 339c14-37 37-52 64-41 1 27-15 45-47 53" fill="#7c9278"/>
+            <path d="M316 342h10v78h-10z" fill="#a6815f"/>
+            <path d="M290 420h63v31c0 7-7 13-14 13h-35c-8 0-14-6-14-13z" fill="#b59b7c"/>
+            <path d="M0 0h600v510H0z" fill="#fff" opacity=".08"/>
+          </svg>
+          <div class="about-caption">素材の表情を、暮らしの中へ。</div>
+        </div>
+        <div class="about-copy">
+          <div class="section-label">About unique house</div>
+          <h2>一棟まるごとの改修を、<br>ひとつの窓口で。</h2>
+          <p>建物全体の改修は、工事の工程や業者間の調整に手間がかかります。株式会社ユニークハウスでは、解体から仕上げまで一社で一貫して対応し、工事全体の窓口をまとめます。</p>
+          <p>長年の現場経験を通じて築いてきた協力会社とのネットワークを活かし、旅館・ホテルをはじめ、改修工事に関する幅広い内容をご相談いただけます。</p>
+          <div class="about-facts">
+            <div class="about-fact"><strong>一棟まるごと</strong><span>建物全体の改修に対応</span></div>
+            <div class="about-fact"><strong>一社一貫</strong><span>解体から仕上げまでご相談可能</span></div>
+          </div>
+          <a class="text-link" href="#contact">工事について相談する <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section works-section" id="works">
+      <div class="wrap">
+        <div class="section-head">
+          <div><div class="section-label">Hospitality renovation</div><h2>旅館・ホテルの改修工事</h2></div>
+          <p>旅館・ホテルの客室から共用部まで、施設ごとの改修内容に合わせて対応します。建物全体の工事を一社窓口で進め、解体から仕上げまでまとめてご相談いただけます。</p>
+        </div>
+        <div class="project-grid">
+          <article class="project-card">
+            <span class="project-type">01 / GUEST ROOMS</span>
+            <h3>客室の内装改修</h3>
+            <p>既存内装の解体・撤去から、下地、壁・床などの仕上げ、室内設備の取付まで。改修の範囲に合わせて客室内の工事を進めます。</p>
+          </article>
+          <article class="project-card">
+            <span class="project-type">02 / INTERIOR WORKS</span>
+            <h3>室内全体の改修工事</h3>
+            <p>必要な工程を整理し、解体、造作、設備、内装仕上げへと順に施工。部分工事から室内全体の改修まで幅広く対応します。</p>
+          </article>
+          <article class="project-card">
+            <span class="project-type">03 / INNS & HOTELS</span>
+            <h3>宿泊施設の各種室内工事</h3>
+            <p>旅館・ホテルの施設用途やご要望を伺い、客室をはじめとする室内の改修内容に応じて工事をご相談いただけます。</p>
+          </article>
+          <article class="project-card">
+            <span class="project-type">04 / FROM DEMOLITION TO FINISH</span>
+            <h3>解体から仕上げまで一貫対応</h3>
+            <p>工事全体を一社で一貫してお受けし、協力会社と連携して進行します。業者間の調整や連絡先を分ける手間を軽減し、完成・引き渡しまで対応します。</p>
+          </article>
+        </div>
+        <div class="workflow">
+          <h3>工事の主な流れ</h3>
+          <div class="workflow-steps">
+            <div class="workflow-step"><small>STEP 01</small><strong>解体・撤去</strong></div>
+            <div class="workflow-step"><small>STEP 02</small><strong>下地・造作</strong></div>
+            <div class="workflow-step"><small>STEP 03</small><strong>設備・各種工事</strong></div>
+            <div class="workflow-step"><small>STEP 04</small><strong>内装仕上げ</strong></div>
+            <div class="workflow-step"><small>STEP 05</small><strong>確認・引き渡し</strong></div>
+          </div>
+          <p class="workflow-note">建物や工事内容により、実際の工程・施工範囲は異なります。詳細はお問い合わせください。</p>
+        </div>
+        <div class="case-gallery-head"><h3>施工事例</h3><span>ROOM INTERIOR · 08 CASES</span></div>
+        <div class="case-gallery" aria-label="旅館・ホテルの室内施工事例">
+          <figure class="case-card">
+            <div class="case-photos">
+              <div class="case-photo"><img src="assets/cases/case01-room.jpg" alt="施工事例01：客室" loading="lazy" decoding="async"></div>
+              <div class="case-photo"><img src="assets/cases/case01-vanity.jpg" alt="施工事例01：洗面台" loading="lazy" decoding="async"></div>
+              <div class="case-photo"><img src="assets/cases/case01-bathroom.jpg" alt="施工事例01：浴室" loading="lazy" decoding="async"></div>
+            </div>
+            <figcaption class="case-caption"><span>CASE 01</span><strong>施工事例 01</strong></figcaption>
+          </figure>
+          <figure class="case-card">
+            <div class="case-photos">
+              <div class="case-photo"><img src="assets/cases/case02-bedroom.jpg" alt="施工事例02：ベッドルーム" loading="lazy" decoding="async"></div>
+              <div class="case-photo"><img src="assets/cases/case02-shower.jpg" alt="施工事例02：浴室とシャワー" loading="lazy" decoding="async"></div>
+              <div class="case-photo"><img src="assets/cases/case02-room-equipment.jpg" alt="施工事例02：室内と設備" loading="lazy" decoding="async"></div>
+            </div>
+            <figcaption class="case-caption"><span>CASE 02</span><strong>施工事例 02</strong></figcaption>
+          </figure>
+          <figure class="case-card">
+            <div class="case-photos">
+              <div class="case-photo"><img src="assets/cases/case03-room.jpg" alt="施工事例03：客室" loading="lazy" decoding="async"></div>
+              <div class="case-photo"><img src="assets/cases/case03-washbasin.jpg" alt="施工事例03：洗面台" loading="lazy" decoding="async"></div>
+              <div class="case-photo"><img src="assets/cases/case03-bedroom.jpg" alt="施工事例03：ベッドルーム" loading="lazy" decoding="async"></div>
+            </div>
+            <figcaption class="case-caption"><span>CASE 03</span><strong>施工事例 03</strong></figcaption>
+          </figure>
+          <figure class="case-card">
+            <div class="case-photos">
+              <div class="case-photo"><img src="assets/cases/case04-bedroom.jpg" alt="施工事例04：ベッドルーム" loading="lazy" decoding="async"></div>
+              <div class="case-photo"><img src="assets/cases/case04-bathroom.jpg" alt="施工事例04：浴室" loading="lazy" decoding="async"></div>
+              <div class="case-photo"><img src="assets/cases/case04-kitchen-laundry.jpg" alt="施工事例04：キッチンと洗濯設備" loading="lazy" decoding="async"></div>
+            </div>
+            <figcaption class="case-caption"><span>CASE 04</span><strong>施工事例 04</strong></figcaption>
+          </figure>
+          <figure class="case-card">
+            <div class="case-photos">
+              <div class="case-photo"><img src="assets/cases/case05-room.jpg" alt="施工事例05：客室" loading="lazy" decoding="async"></div>
+              <div class="case-photo"><img src="assets/cases/case05-bathroom-laundry.jpg" alt="施工事例05：洗面・シャワーと洗濯設備" loading="lazy" decoding="async"></div>
+              <div class="case-photo"><img src="assets/cases/case05-twin-room.jpg" alt="施工事例05：ツインベッドの客室" loading="lazy" decoding="async"></div>
+            </div>
+            <figcaption class="case-caption"><span>CASE 05</span><strong>施工事例 05</strong></figcaption>
+          </figure>
+          <figure class="case-card">
+            <div class="case-photos">
+              <div class="case-photo"><img src="assets/cases/case06-room.jpg" alt="施工事例06：ベッドと畳スペース" loading="lazy" decoding="async"></div>
+              <div class="case-photo"><img src="assets/cases/case06-washbasin.jpg" alt="施工事例06：洗面台" loading="lazy" decoding="async"></div>
+              <div class="case-photo"><img src="assets/cases/case06-bedroom.jpg" alt="施工事例06：ツインベッドの客室" loading="lazy" decoding="async"></div>
+            </div>
+            <figcaption class="case-caption"><span>CASE 06</span><strong>施工事例 06</strong></figcaption>
+          </figure>
+          <figure class="case-card">
+            <div class="case-photos">
+              <div class="case-photo"><img src="assets/cases/case07-room.jpg" alt="施工事例07：和室" loading="lazy" decoding="async"></div>
+              <div class="case-photo"><img src="assets/cases/case07-shower.jpg" alt="施工事例07：浴室とシャワー" loading="lazy" decoding="async"></div>
+              <div class="case-photo"><img src="assets/cases/case07-washbasin.jpg" alt="施工事例07：洗面台と客室" loading="lazy" decoding="async"></div>
+            </div>
+            <figcaption class="case-caption"><span>CASE 07</span><strong>施工事例 07</strong></figcaption>
+          </figure>
+          <figure class="case-card">
+            <div class="case-photos">
+              <div class="case-photo"><img src="assets/cases/case08-room.jpg" alt="施工事例08：和室とベッドルーム" loading="lazy" decoding="async"></div>
+              <div class="case-photo"><img src="assets/cases/case08-bathroom.jpg" alt="施工事例08：洗面台と浴室" loading="lazy" decoding="async"></div>
+              <div class="case-photo"><img src="assets/cases/case08-tatami-room.jpg" alt="施工事例08：畳スペース" loading="lazy" decoding="async"></div>
+            </div>
+            <figcaption class="case-caption"><span>CASE 08</span><strong>施工事例 08</strong></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section contact" id="contact">
+      <div class="wrap contact-grid">
+        <div>
+          <div class="section-label">Contact</div>
+          <h2>室内工事のこと、<br>まずはご相談ください。</h2>
+          <p class="contact-copy">旅館・ホテルの改修工事から、住宅を含む室内工事全般まで。工事内容やご希望をお電話またはメールでお聞かせください。</p>
+        </div>
+        <div class="contact-card">
+          <small>CONTACT</small>
+          <h3>株式会社ユニークハウス</h3>
+          <dl class="contact-details">
+            <div class="contact-row"><dt>電話</dt><dd><a href="tel:0482125415">048-212-5415</a></dd></div>
+            <div class="contact-row"><dt>FAX</dt><dd>048-212-5415</dd></div>
+            <div class="contact-row"><dt>メール</dt><dd><a href="mailto:uniquehouse0168@gmail.com">uniquehouse0168@gmail.com</a></dd></div>
+            <div class="contact-row"><dt>所在地</dt><dd>埼玉県川口市芝富士1-9-4</dd></div>
+          </dl>
+          <div class="wechat-contact">
+            <img src="assets/wechat-qr.png" alt="WeChatのQRコード">
+            <p><strong>WeChat</strong>QRコードから友だち追加してご相談いただけます。</p>
+          </div>
+          <a class="button" href="mailto:uniquehouse0168@gmail.com?subject=%E5%86%85%E8%A3%85%E3%83%AA%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0%E3%81%AE%E3%81%94%E7%9B%B8%E8%AB%87">メールで問い合わせる <span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="wrap footer-inner">
+      <div class="footer-brand"><span class="brand-mark" aria-hidden="true"><span class="mark-u">U</span><span class="mark-q">Q</span></span>株式会社ユニークハウス</div>
+      <p>© <span id="year">2026</span> UNIQUE HOUSE. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
